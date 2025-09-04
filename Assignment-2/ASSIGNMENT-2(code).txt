@@ -1,0 +1,774 @@
+				ASSIGNMENT-2
+
+
+				Task-1:
+
+			class name : UniversityTester
+
+
+public class UniversityTester {
+    public static void main(String[] args) {
+
+        University u1 = new University();
+        University u2 = new University();
+
+
+        System.out.println("Location of u1: " + u1);
+        System.out.println("Location of u2: " + u2);
+
+
+        System.out.println("u1 name = " + u1.name);
+        System.out.println("u1 country = " + u1.country);
+        System.out.println("u2 name = " + u2.name);
+        System.out.println("u2 country = " + u2.country);
+
+
+        if (u1 == u2) {
+            System.out.println("The object locations same....");
+        } else {
+            System.out.println("The object locations not same !!!");
+        }
+
+        u1.name = "Imperial College London";
+        u1.country = "England";
+
+
+        u2.name = "BRAC University";
+        u2.country = "Bangladesh";
+
+        System.out.println("After changing instance variables =");
+        System.out.println("u1 name = " + u1.name);
+        System.out.println("u1 country = " + u1.country);
+        System.out.println("u2 name = " + u2.name);
+        System.out.println("u2 country = " + u2.country);
+
+
+        if (u1.name == u2.name) {
+            System.out.println("The objects have same name....");
+        } else {
+            System.out.println("The objects have not the same name....");
+        }
+        if (u1.country == u2.country) {
+            System.out.println("The objects have same country....");
+        } else {
+            System.out.println("The objects have not the same country....");
+        }
+
+
+    }
+}
+
+
+		Class name : University
+
+
+
+public class University {
+    public String name;
+    public String country;
+}
+
+
+
+
+		Task-2
+
+
+	Class name : StudentTester1
+
+
+
+public class StudentTester1 {
+    public static void main(String [] args){
+        Student s1 = new Student();
+        System.out.println("Name of the Student: "+s1.name);
+        System.out.println("ID of the Student: "+s1.id);
+        s1.name = "Bob";
+        s1.id = 123;
+        System.out.println("Name of the Student: "+s1.name);
+        System.out.println("ID of the Student: "+s1.id);
+    }
+}
+
+
+
+
+		Class name: Student 
+
+
+
+public class Student {
+    public String name="Default";
+    public int id;
+}
+
+
+
+		Task-3
+
+
+	Class name : CourseTester 
+
+public class CourseTester {
+    public static void main(String[] args) {
+        CSECourse c1 = new CSECourse();
+        System.out.println("Course Name: " + c1.courseName);
+        System.out.println("Course Code: " + c1.courseCode);
+        System.out.println("Credit: " + c1.credit);
+    }
+}
+
+
+
+	Class name : CSECourse 
+
+
+public class CSECourse {
+    public String courseName = "Programming Language II";
+    public String courseCode = "CSE111";
+    public int credit = 3;
+}
+
+
+
+		Task-4
+
+	Class name : Tester6 
+
+
+
+public class Tester6 {
+    public static void main(String[] args) {
+        ImaginaryNumber num1 = new ImaginaryNumber();
+        num1.printNumber();
+        System.out.println("1********");
+
+        num1.realPart = 3;
+        num1.imaginaryPart = 7;
+        num1.printNumber();
+        System.out.println("2********");
+
+        ImaginaryNumber num2 = new ImaginaryNumber();
+        num2.realPart = 1;
+        num2.imaginaryPart = 9;
+        num2.printNumber();
+    }
+}
+
+
+
+		Class name : ImaginaryNumber 
+
+public class ImaginaryNumber {
+    public int realPart = 0;
+    public int imaginaryPart = 0;
+
+    public void printNumber() {
+        System.out.println(realPart + " + " + imaginaryPart + "i");
+    }
+}
+
+
+
+		Task-5
+	
+	Class name : Tester5 
+
+
+
+public class Tester5 {
+    public static void main(String[] args) {
+        Course c1 = new Course();
+        Course c2 = new Course();
+
+        c1.updateDetails("Programming Language I", "CSE110", 3);
+        System.out.println("========== 1 ==========");
+        c1.displayCourse();
+
+        c2.updateDetails("Data Structures", "CSE220", 3);
+        System.out.println("========== 2 ==========");
+        c2.displayCourse();
+
+        c1.updateDetails("Programming Language II", "CSE111", 3);
+        System.out.println("========== 3 ==========");
+        c1.displayCourse();
+    }
+}
+
+
+
+	Class name : Course 
+
+
+public class Course {
+    public String courseName;
+    public String courseCode;
+    public int courseCredit;
+
+    public void updateDetails(String name, String code, int credit) {
+        courseName = name;
+        courseCode = code;
+        courseCredit = credit;
+    }
+
+    public void displayCourse() {
+        System.out.println("Course Name =" + courseName);
+        System.out.println("Course Code = " + courseCode);
+        System.out.println("Course Credit = " + courseCredit);
+    }
+}
+
+
+		
+
+
+
+			Task-6
+
+
+		Class name : AssignmentTester 
+
+public class AssignmentTester {
+    public static void main(String[] args) {
+        Assignment as1 = new Assignment();
+        as1.printDetails();
+        System.out.println("1---------------");
+
+        as1.tasks = 11;
+        as1.difficulty = "Moderate";
+        as1.submission = true;
+        as1.printDetails();
+        System.out.println("2---------------");
+
+        System.out.println(as1.makeOptional());
+        System.out.println("3---------------");
+
+        as1.printDetails();
+        System.out.println("4---------------");
+
+        Assignment as2 = new Assignment();
+        as2.tasks = 12;
+        as2.difficulty = "Hard";
+        as2.submission = false;
+        as2.printDetails();
+        System.out.println("5---------------");
+
+        System.out.println(as2.makeOptional());
+    }
+}
+
+
+
+		Class name : Assignment 
+
+
+public class Assignment {
+    public int tasks = 0;
+    public String difficulty;
+    public boolean submission = false;
+
+    public void printDetails() {
+        System.out.println("Number of tasks: " + tasks);
+        System.out.println("Difficulty level: " + difficulty);
+        System.out.println("Submission required: " + submission);
+    }
+
+    public String makeOptional() {
+        if (submission) {
+            submission = false;
+            return "Assignment will not require\nsubmission";
+        } else {
+            return "Submission is already not required";
+        }
+    }
+}
+
+
+
+
+ 		Task-7
+
+	Class name : Tester9 
+
+
+public class Tester9 {
+    public static void main(String[] args) {
+        CellPhone phone1 = new CellPhone();
+        phone1.printDetails();
+
+        phone1.model = "Nokia 1100";
+        System.out.println("1##################");
+
+        phone1.storeContact("Joy - 01834");
+        System.out.println("===================");
+
+        phone1.printDetails();
+        System.out.println("2##################");
+
+        phone1.storeContact("Toya - 01334");
+        phone1.storeContact("Aayan - 01135");
+        System.out.println("===================");
+
+        phone1.printDetails();
+        System.out.println("3##################");
+
+        phone1.storeContact("Sani - 01441");
+        System.out.println("===================");
+
+        phone1.printDetails();
+    }
+}
+
+
+
+		Class name : CellPhone 
+
+
+
+public class CellPhone {
+    public String model = "Phone Model unknown";
+    private String[] contacts = new String[3];
+    private int contactCount = 0;
+
+    public void storeContact(String contact) {
+        if (contactCount < contacts.length) {
+            contacts[contactCount] = contact;
+            contactCount++;
+            System.out.println("Contact Stored");
+        } else {
+            System.out.println("Memory full. New contact can't be\nstored.");
+        }
+    }
+
+    public void printDetails() {
+        System.out.println("Phone Model " + model);
+        System.out.println("Contacts Stored " + contactCount);
+        if (contactCount > 0) {
+            System.out.println("Stored Contacts:");
+            for (int i = 0; i < contactCount; i++) {
+                System.out.println(contacts[i]);
+            }
+        }
+    }
+}
+
+
+
+
+		Task-8 
+
+		Class name : Tester3
+
+
+public class Tester3{
+    public static void main(String[] args){
+        Employee emp1 = new Employee();
+        Employee emp2 = new Employee();
+        Employee emp3 = new Employee();
+        emp1.newEmployee("Harry Potter");
+        emp2.newEmployee("Hermione Granger");
+        emp3.newEmployee("Ron Weasley");
+        System.out.println("1 ==========");
+        emp1.displayInfo();
+        System.out.println("2 ==========");
+        emp2.displayInfo();
+        System.out.println("3 ==========");
+        emp3.displayInfo();
+        System.out.println("4 ==========");
+        emp1.calculateTax();
+        System.out.println("5 ==========");
+        emp1.promoteEmployee("lead");
+        System.out.println("6 ==========");
+        emp1.calculateTax();
+        System.out.println("7 ==========");
+        emp1.displayInfo();
+        System.out.println("8 ==========");
+        emp3.promoteEmployee("manager");
+        System.out.println("9 ==========");
+        emp3.calculateTax();
+        System.out.println("10 ==========");
+        emp3.displayInfo();
+    }
+}
+
+
+		Class name : Employee
+
+
+public class Employee {
+    private String name;
+    private double salary;
+    private String designation;
+
+    public void newEmployee(String employeeName) {
+        this.name = employeeName;
+        this.salary = 30000.0;
+        this.designation = "junior";
+    }
+
+    public void displayInfo() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Salary: " + salary + " Tk");
+        System.out.println("Employee Designation: " + designation);
+    }
+
+    public void calculateTax() {
+        if (salary > 50000) {
+            double tax = salary * 0.30;
+            System.out.println(name + " Tax Amount: " + tax + " Tk");
+        } else if (salary > 30000) {
+            double tax = salary * 0.10;
+            System.out.println(name + " Tax Amount: " + tax + " Tk");
+        } else {
+            System.out.println("No need to pay tax");
+        }
+    }
+
+    public void promoteEmployee(String newDesignation) {
+        if (newDesignation.equalsIgnoreCase("senior")) {
+            designation = "senior";
+            salary += 25000;
+        } else if (newDesignation.equalsIgnoreCase("lead")) {
+            designation = "lead";
+            salary += 50000;
+        } else if (newDesignation.equalsIgnoreCase("manager")) {
+            designation = "manager";
+            salary += 75000;
+        } else {
+            System.out.println("Invalid designation.");
+            return;
+        }
+        System.out.println(name + " has been promoted to " + designation);
+        System.out.printf("New Salary: %.2f Tk\n", salary);
+    }
+}
+
+
+
+
+
+
+		Task-9
+
+	Outputs are :
+		21
+		5.5
+		2.5
+		22
+		22
+		5.5
+		23
+		6.5
+		24
+		6.5
+
+
+
+
+		Task - 10
+
+
+		New Student
+		Student Two
+		New Student
+		2.3
+		3.3
+		2.3
+		old student
+		oldest student
+		oldest student
+		2.3
+		3.5
+		3.5
+
+
+
+
+		Task-11
+
+
+		Outputs:
+
+		x	y	sum
+		4 	6 	10
+		5	2 	17
+		8 	10	35
+		22	6	63
+
+
+
+
+
+		Task-1
+
+		Class name : Test7
+
+public class Test7{
+public static void main(String [] args){
+Cat c1 = new Cat();
+System.out.println("===================");
+c1.printCat();
+c1.color = "Black";
+System.out.println("===================");
+c1.printCat();
+c1.color = "Brown";
+c1.action = "jumping";
+System.out.println("===================");
+c1.printCat();
+}
+}
+
+
+
+		Class name : Cat 
+
+
+public class Cat {
+    public String color = "White";
+    public String action = "sitting";
+
+    public void printCat() {
+        System.out.println(color + " cat is " + action);
+    }
+}
+
+
+
+
+		Task-2
+
+		class name : Test8{
+
+public class Test8{
+public static void main(String args[]) {
+Bird b1 = new Bird();
+b1.name = "Parrot";
+b1.flyUp(3);
+b1.makeNoise();
+b1.flyDown(5);
+b1.flyDown(2);
+b1.flyDown(1);
+Bird b2 = new Bird();
+b2.name = "Eagle";
+b2.flyUp(5);
+b2.flyDown(5);
+b2.makeNoise();
+}
+}
+
+
+		
+
+
+		Class name : Bird
+
+public class Bird {
+    public String name;
+    private int height = 0;
+
+    public void flyUp(int feet) {
+        height += feet;
+        System.out.println(name + " has flown up " + feet + " feet.");
+    }
+
+    public void flyDown(int feet) {
+        if (feet > height) {
+            System.out.println(name + " cannot fly down " + feet + " feet.");
+        } else {
+            height -= feet;
+            if (height == 0) {
+                System.out.println(name + " has flown down " + feet + " feet and\nlanded.");
+            } else {
+                System.out.println(name + " has flown down " + feet + " feet.");
+            }
+        }
+    }
+
+    public void makeNoise() {
+        if ("Parrot".equalsIgnoreCase(name)) {
+            System.out.println("Squawk");
+        } else if ("Eagle".equalsIgnoreCase(name)) {
+            System.out.println("Squee");
+        } else {
+            System.out.println("Unknown bird noise");
+        }
+    }
+}
+
+
+
+
+			Task-3
+
+			Class name : BurgerMaker
+
+
+public class BurgerMaker{
+public static void main(String [] args){
+ChickenBurger b1 = new ChickenBurger();
+System.out.println(b1.bun);
+System.out.println(b1.price);
+System.out.println(b1.sauceOption);
+System.out.println(b1.spiceLevel);
+System.out.println("----------1----------");
+System.out.println(b1.serveBurger());
+System.out.println("----------2----------");
+b1.customizeSpiceLevel("Extreme Jhaal");
+b1.customizeSpiceLevel("Spicy");
+System.out.println("----------3----------");
+System.out.println(b1.serveBurger());
+System.out.println("----------4----------");
+ChickenBurger b2 = new ChickenBurger();
+b2.bun = "Brioche";
+b2.price += 50;
+b2.sauceOption = "Regular";
+b2.customizeSpiceLevel("Naga");
+System.out.println("----------5----------");
+System.out.println(b2.serveBurger());
+}
+}
+
+
+			Class name : ChickenBurger
+
+
+
+public class ChickenBurger {
+    public String bun = "Sesame";
+    public int price = 200;
+    public String sauceOption = "Less";
+    public String spiceLevel = "Not Set";
+
+    String[] availableSpices = {"Mild", "Spicy", "Naga", "Extreme"};
+
+    public void customizeSpiceLevel(String level) {
+        boolean found = false;
+        for (String spice : availableSpices) {
+            if (spice.equals(level)) {
+                spiceLevel = level;
+                System.out.println("Spice level set to " + level + ".");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("This spice level is unavailable.");
+        }
+    }
+
+    public String serveBurger() {
+        if (spiceLevel.equals("Not Set")) {
+            return "Cannot serve now. Customize Spice\nLevel first.";
+        } else {
+            return "The burger is being served:-\n" +
+                   "Bun Type: " + bun + "\n" +
+                   "Price: " + price + "\n" +
+                   "Sauce Option: " + sauceOption + "\n" +
+                   "Spice Level: " + spiceLevel;
+        }
+    }
+}
+
+
+
+
+			Task-4
+
+			class name : MobilePhoneTester
+
+public class MobilePhoneTester{
+public static void main(String args []){
+MobilePhone m1 = new MobilePhone();
+MobilePhone m2 = new MobilePhone();
+m1.setContactCapacity(5);
+m2.setContactCapacity(100);
+m1.details();
+System.out.println("1----------------");
+m1.addContact("John", 9866);
+m1.addContact("Maria", 7865);
+System.out.println("2----------------");
+m1.details();
+System.out.println("3----------------");
+m1.makeCall(9866);
+System.out.println("4----------------");
+m1.addContact("Henry", 2365);
+System.out.println("5----------------");
+m1.makeCall(7552);
+m1.makeCall(2365);
+System.out.println("6----------------");
+m1.addContact("Gomes", 4589);
+m1.addContact("Antony", 8421);
+m1.addContact("Tony", 5789);
+System.out.println("7----------------");
+m1.details();
+}
+}
+
+
+		Class name : MobilePhone 
+
+
+public class MobilePhone {
+    private int capacity;
+    private int contactCount = 0;
+    private String[] names;
+    private int[] numbers;
+
+    public void setContactCapacity(int c) {
+        capacity = c;
+        names = new String[capacity];
+        numbers = new int[capacity];
+    }
+
+    public void addContact(String name, int number) {
+        if (contactCount < capacity) {
+            names[contactCount] = name;
+            numbers[contactCount] = number;
+            contactCount++;
+            System.out.println("The contact of " + name + " is added.");
+        } else {
+            System.out.println("Storage Full!!");
+        }
+    }
+
+    public void makeCall(int number) {
+        boolean found = false;
+        for (int i = 0; i < contactCount; i++) {
+            if (numbers[i] == number) {
+                System.out.println("Calling " + names[i] + " . . .");
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Calling " + number + " . . .");
+        }
+    }
+
+    public void details() {
+        System.out.println("Total Contacts: " + contactCount);
+        System.out.println("Contact List:");
+        for (int i = 0; i < contactCount; i++) {
+            System.out.println(names[i] + ":" + numbers[i]);
+        }
+    }
+}
+
+
+
+
+			TASK-5
+
+
+			OUTPUT:
+
+
+			X	Y	SUM
+
+			11	5	16
+			22	7	29
+			17	3	23
+
+
+
+
