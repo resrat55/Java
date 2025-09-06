@@ -1,0 +1,17 @@
+public class Shape {
+    public String name;
+    public String color;
+    public void displayInfo() {
+        System.out.printf("Name: %s\nColor: %s\n", name, color);
+    }
+}
+
+public class Circle extends Shape {
+    public double radius;
+    public void displayInfo() {
+        super.displayInfo();
+    }
+    public void area(){
+        System.out.println("Area of "+color+" "+name+" :" +3.1416* radius * radius);
+    }
+}
